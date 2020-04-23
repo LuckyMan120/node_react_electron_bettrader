@@ -1,0 +1,138 @@
+{
+  "name": "trader-pro",
+  "author": "Trader Pro",
+  "description": "Sports Trading on the BetFair Exchange",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.3.0",
+    "@material-ui/icons": "^4.2.1",
+    "bluebird": "^3.5.5",
+    "braintree": "^2.21.0",
+    "braintree-web-drop-in-react": "^1.1.0",
+    "classnames": "^2.2.6",
+    "color.js": "^0.1.3",
+    "dotenv": "^8.2.0",
+    "electron-context-menu": "^0.15.1",
+    "electron-is-dev": "^1.1.0",
+    "express-session": "^1.17.0",
+    "fetch-mock": "^8.3.1",
+    "html-react-parser": "^0.9.1",
+    "immutability-helper": "^3.0.1",
+    "immutable": "^4.0.0-rc.12",
+    "jest": "^24.7.1",
+    "jquery": "^3.4.1",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "mongoose": "^5.6.11",
+    "node-fetch": "^2.6.0",
+    "object-path-immutable": "^4.0.2",
+    "paypal-checkout": "^4.0.289",
+    "react": "^16.10.2",
+    "react-cookie": "^4.0.1",
+    "react-dom": "^16.10.2",
+    "react-draggable": "^4.0.3",
+    "react-flag-icon-css": "^1.0.25",
+    "react-helmet": "^5.2.1",
+    "react-loader-spinner": "^3.1.4",
+    "react-lodash": "^0.1.2",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.3.0",
+    "react-sticky-table": "^4.0.0",
+    "react-table": "^6.10.3",
+    "react-useinterval": "^1.0.1",
+    "react-virtualized": "^9.21.1",
+    "react-virtualized-auto-sizer": "^1.0.2",
+    "react-window": "^1.8.1",
+    "reactstrap": "^8.0.1",
+    "redux": "^4.0.4",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "seamless-immutable": "^7.1.4",
+    "socket.io": "^2.3.0",
+    "thunk": "0.0.1",
+    "typescript": "^3.5.3",
+    "url-regex": "^5.0.0",
+    "validator": "^11.1.0",
+    "wait-on": "^3.3.0"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "com.traderpro.app",
+    "files": [
+      "./build/**/*",
+      "./server/**/*",
+      "./public/electron.js",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "scripts": {
+    "start": "cross-env PORT=8080 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "cross-env NODE_ENV=production nodemon server/index.js",
+    "dev": "cross-env concurrently \"npm run start\" \"npm run server\"",
+    "electron-dev": "cross-env BROWSER=none npm run build && electron .",
+    "electron-build": "cross-env npm run build && electron-builder"
+  },
+  "main": "public/electron.js",
+  "proxy": "http://localhost:3001",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "electron": "2.0.2",
+    "electron-builder": "^21.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "local-ssl-proxy": "^1.3.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.4.5",
+    "webpack": "^4.41.2"
+  },
+  "optionalDependencies": {
+    "win-node-env": "^0.4.0"
+  }
+}

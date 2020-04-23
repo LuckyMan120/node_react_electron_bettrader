@@ -1,0 +1,70 @@
+html, body, #root, #root > div {
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    #root > div {
+		overflow: auto;
+	}
+}
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+.root {
+	display: flex;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Opera and Firefox */
+  }
+
+.content {
+	width: 100%;
+	height: 100vh;
+}
+
+.sticky {
+	position: sticky;
+	top: 0;
+}
+
+.box {
+	display: flex;
+	align-items:center;
+ }
+
+ ::-webkit-scrollbar {
+    display: none;
+}
+
+#spinner {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+.connectionbug-container {
+	position: absolute;
+	height: 4%;
+	width: 100vw;
+	background: #e13139;
+	z-index: 999;
+	text-align: center;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.connectionbug-text {
+	margin-right: 1%;
+}
