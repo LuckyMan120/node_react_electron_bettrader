@@ -24,7 +24,7 @@
     "jquery": "^3.4.1",
     "material-ui-icons": "^1.0.0-beta.36",
     "mongoose": "^5.6.11",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "object-path-immutable": "^4.0.2",
     "paypal-checkout": "^4.0.289",
     "react": "^16.10.2",
